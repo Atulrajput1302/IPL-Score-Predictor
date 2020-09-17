@@ -1,4 +1,7 @@
-# IPL-Score-Predictor
+* # IPL-Score-Predictor DEMO !
+
+![Demo](Resources/Hnet-image.gif)
+
 
 ### Overview
 A small Machine learning project which predicts the score of the First Innings in IPL 2020. 
@@ -45,5 +48,12 @@ This project has three keys aspects:
 
     * Backend
         * ➔ Used FLASK (back-end micro-framework)
+
+
+
+
+
+
+
 
 
