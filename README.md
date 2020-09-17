@@ -1,7 +1,7 @@
 # IPL-Score-Predictor
 
 ### Overview
-A small Machine learning project which predicts the score of the First Innings in IPL 2020
+A small Machine learning project which predicts the score of the First Innings in IPL 2020. 
 In this project I have tried to combine my basic knowledge in :
 * ➔ Data science
 * ➔ Machine Learning 
