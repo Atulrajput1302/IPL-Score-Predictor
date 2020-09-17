@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+
+		<title>HOME: IPL</title>
+ <link rel="stylesheet" type="text/css" href="../static/slider.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
+
+}
+        body { background-col: url(xx.jpg);}
+        h1 { margin:150px auto 30px auto; text-align:center; color:#fff;}
+
+.hi-slide { position: relative; width: 754px; height: 580px; margin: 10px auto 0; }
+
+.hi-slide .hi-next,
+.hi-slide .hi-prev
+            { position: absolute;
+              top: 30%;
+              width: 40px;
+              height: 40px;
+              margin-top: -20px;
+                border-radius: 50px;
+
+
+              line-height: 40px;
+              text-align: center;
+              cursor: pointer;
+              background-color: #fff;
+              color: black;
+              transition: all 0.1s;
+              font-size: 20px;
+                font-weight: bold;
+            }
+.hi-slide .hi-next:hover,
+.hi-slide .hi-prev:hover
+            {
+            opacity: 1;
+            background-color: #fff;
+            }
+
+.hi-slide .hi-prev { left: -80px; }
+
+.hi-slide .hi-prev::before { content: '<'; }
+.hi-slide .hi-next { right: -60px; }
+.hi-slide .hi-next::before { content: '>'; }
+.hi-slide > ul
+                    {
+                        list-style: none;
+                        position: relative;
+                        width: 754px;
+                        height: 292px;
+                        margin: 0;
+                        padding: 0;
+}
+
+
+.hi-slide > ul > li {
+            overflow: hidden;
+            position: absolute;
+            z-index: 0;
+            left: 377px;
+            top: 146px;
+            width: 0;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 3px solid #fff;
+            background-color: black;
+            cursor: pointer; }
+
+.hi-slide > ul > li > img { width: 100%; height: 100%; background-position: center;}
+</style>
+
+</head>
+
+<!-- --------------------------------------------------------------------------------- -->
+
+	<body>
+ <br><br>
+		<div class="slide hi-slide">
+		  <div class="hi-prev "></div>
+			<div class="hi-next "></div>
+			<ul>
+          <li> <img src="../static/csk.png" alt=""></li>
+          <li> <img src="../static/dc.png" alt=""> </li>
+          <li> <img src="../static/kkr.jpg" alt=""> </li>
+          <li> <img src="../static/kxip.png" alt=""> </li>
+          <li> <img src="../static/mi.jpg" alt=""></li>
+          <li> <img src="../static/rcb.png" alt=""> </li>
+          <li> <img src="../static/rr.png" alt=""> </li>
+          <li> <img src="../static/srh.png" alt=""> </li>
+
+			</ul>
+		</div>
+
+
+<br><br><br><br><br>
+		<div class="x">
+			<h3>made with laub</h3>
+			<h3>made by Atul!</h3
+		</div>
+<br><br><br><br>
+
+
+
+
+<!-- form content -->
+<form class="box" action="{{ url_for('predict') }}" method="POST">
+
+	<h1  class="head_text">Indian Premier League - 2020 </h1>
+
+	<input class="form-input" type="text" name="overs" placeholder="Overs (>= 5.0) eg. 7.2"  required="required"><br>
+
+	<input class="form-input" type="text" name="runs" placeholder="Runs eg. 64" required="required"><br>
+
+	<input class="form-input" type="text" name="wickets" placeholder="Wickets eg. 4" required="required"><br>
+
+	<input class="form-input" type="text" name="runs_in_prev_5" placeholder="Runs scored in previous 5 Overs eg. 42" required="required"><br>
+
+	<input class="form-input" type="text" name="wickets_in_prev_5" placeholder="Wickets taken in previous 5 Overs eg. 3" required="required"><br>
+
+
+			<div class="select-class"  >
+						<h1 class="heading">Batting Team</h1>
+						<select required="required" name="batting-team">
+							<option value="none">--- Select a Batting team ---</option>
+							<option value="Mumbai Indians">Mumbai Indians</option>
+							<option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+							<option value="Chennai Super Kings">Chennai Super Kings</option>
+							<option value="Rajasthan Royals">Rajasthan Royals</option>
+							<option value="Kings XI Punjab">Kings XI Punjab</option>
+							<option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+							<option value="Delhi Daredevils">Delhi Daredevils</option>
+							<option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+						</select>
+			</div>
+
+
+			        <div class="select-class1">
+			          <h1 class="heading">Bowling Team</h1>
+			          <select required="required" name="bowling-team">
+									<option value="none">--- Select a Bowling team ---</option>
+									<option value="Mumbai Indians">Mumbai Indians</option>
+									<option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+									<option value="Chennai Super Kings">Chennai Super Kings</option>
+									<option value="Rajasthan Royals">Rajasthan Royals</option>
+									<option value="Kings XI Punjab">Kings XI Punjab</option>
+									<option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+									<option value="Delhi Daredevils">Delhi Daredevils</option>
+									<option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+			          </select>
+			        </div>
+
+
+			<br><br><br><br><br><br><br>
+			<input type="submit" id="submit_button" name="Submit" value="Predict Score">
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../static/jquery.hislide.js" ></script>
+		<script>
+			$('.slide').hiSlide();
+		</script>
+	</body>
+
+</html>

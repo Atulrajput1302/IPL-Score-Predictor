@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>RESULT: IPL</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="../static//result.css">
+      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+    			<p>Prediction Result.</p>
+    		</div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+            <!-- IPL Banner - 1 -->
+            <div class='ipl-banner-left'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-up">
+
+                        <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="../static/mi.jpg" alt="Mumbai Indians">
+                        </div>
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="../static/srh.png" alt="Sunrisers Hyderabad">
+                        </div>
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="../static/rcb.png" alt="Royal Challengers Bangalore">
+                        </div>
+                        <!-- Image-4 -->
+                        <div class="image-container">
+                            <img class="image-width" src="../static/dc.png" alt="Delhi Capitals">
+                        </div>
+                        <!-- Image-5 -->
+                        <div class="image-container">
+                            <img class="image-width" src="../static/rr.png" alt="Rajasthan Royals">
+                        </div>
+                        <!-- Image-6 -->
+                        <div class="image-container">
+                            <img class="image-width" src="../static/kkr.jpg" alt="Kolkata Knight Riders">
+                        </div>
+                        <!-- Image-7 -->
+                        <div class="image-container">
+                            <img class="image-width" src="../static/kxip.png" alt="Kings XI Punjab">
+                        </div>
+                        <!-- Image-8 -->
+                        <div class="image-container">
+                            <img class="image-width" src="../static/csk.png" alt="Chennai Super Kings">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+			<!-- Result -->
+
+      <p class="a" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <!-- The final predicted score (range): {{ lower_limit }} to {{ upper_limit }} -->
+        Lower Predicted Score: {{low}} <br><br> Upper Predicted Score : {{up}}
+      </p>
+
+
+
+
+            <!-- IPL Banner - 2 -->
+            <div class='ipl-banner-right'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-down">
+
+                      <!-- Image-1 -->
+                      <div class="image-container">
+                          <img class="image-width" src="../static/mi.jpg" alt="Mumbai Indians">
+                      </div>
+                      <!-- Image-2 -->
+                      <div class="image-container">
+                          <img class="image-width" src="../static/srh.png" alt="Sunrisers Hyderabad">
+                      </div>
+                      <!-- Image-3 -->
+                      <div class="image-container">
+                          <img class="image-width" src="../static/rcb.png" alt="Royal Challengers Bangalore">
+                      </div>
+                      <!-- Image-4 -->
+                      <div class="image-container">
+                          <img class="image-width" src="../static/dc.png" alt="Delhi Capitals">
+                      </div>
+                      <!-- Image-5 -->
+                      <div class="image-container">
+                          <img class="image-width" src="../static/rr.png" alt="Rajasthan Royals">
+                      </div>
+                      <!-- Image-6 -->
+                      <div class="image-container">
+                          <img class="image-width" src="../static/kkr.jpg" alt="Kolkata Knight Riders">
+                      </div>
+                      <!-- Image-7 -->
+                      <div class="image-container">
+                          <img class="image-width" src="../static/kxip.png" alt="Kings XI Punjab">
+                      </div>
+                      <!-- Image-8 -->
+                      <div class="image-container">
+                          <img class="image-width" src="../static/csk.png" alt="Chennai Super Kings">
+                      </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+          <p ><a class="Contact"href="{{ url_for('contact') }}" >Contact me</a></p>
+        </div>
+
+    </body>
+</html>
